@@ -1,0 +1,34 @@
+# sigreset
+
+A simple utility to reset the SIGINT and SIGTERM default handlers before
+executing its arguments.
+
+## Usage
+
+```
+usage: sigreset CMD [ARGS...]
+```
+
+## Building
+
+Currently,
+the only tested platform is Ubuntu 18.10,
+but it should work anywhere where a BSD make and some BSD library functions are
+available.
+
+On Ubuntu:
+
+```
+# apt install bmake
+# bmake
+```
+
+## Motivation
+
+Work around the inability of JetBrains to handle signals properly:
+https://youtrack.jetbrains.com/issue/IDEA-157989
+
+It is essentially the same as the utility from Tom Lee
+(https://github.com/thomaslee/signal-reset),
+but I wanted to have fun writing such a utility myself.
+Also, the other program is lacking a proper license.
